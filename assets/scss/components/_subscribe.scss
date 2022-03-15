@@ -1,0 +1,69 @@
+
+.container-suscribete{
+    width: 100%;
+    bottom:0;
+    background: #262626;
+    position: fixed;
+    .content-suscribete{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        display: none;
+        &.active{
+            display: flex;
+        }
+        @include respondto(minxs) {
+            height: 70px;
+            flex-direction: column;
+        }
+        @include respondto(maxxs) {}    
+        .consulta-suscribete{
+            p{
+                font-family: $font-nunito;
+                color:#ffffff;
+                font-size: 20px;
+                font-weight: 800;
+                @include respondto(minxs) {
+                    font-size: 14px;
+                    font-weight: 700;  
+                    padding-bottom: 5px;             
+                }
+                @include respondto(maxxs) {
+                    font-size: 16px;
+                }
+
+            }
+        }
+        .boton-suscribete{
+            margin-left: 30px;
+            @include respondto(minxs) {
+                margin: 0;
+            }
+            @include respondto(maxxs) {}
+            button{
+                border-radius: 5px;
+                border: 1px solid transparent;
+                background: $primary-red;
+                padding: 6px 25px;
+                cursor: pointer;
+                &:hover{
+                    background: #ce0209;
+                }
+                p{
+                    font-family: $font-nunito;
+                    color:#ffffff;
+                    font-size: 17px;
+                    font-weight: 800;
+                    @include respondto(minxs) {
+                        font-size: 13px;
+                        font-weight: 700;
+                    }
+                    @include respondto(maxxs) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

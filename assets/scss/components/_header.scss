@@ -1,0 +1,134 @@
+.header-camara{
+    width: 100%;
+    background: #ffffff;
+    // background: greenyellow;
+    .header-container{
+        display:flex;
+        
+        @include respondto(minxs) {
+            padding: 22px 0;
+            // height: 100px;
+        }
+        @include respondto(maxxs) {
+            flex-direction: column;
+            padding: 15px 0 30px 0;
+        }
+        @include respondto(sm) {
+            flex-direction: column;
+            padding: 20px 0 35px 0;
+        }
+        @include respondto(md) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 110px;
+        }
+        @include respondto(lg) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+        }
+        .logo-principal{
+            @include respondto(minxs) {
+                display:none;
+            }
+            @include respondto(maxxs) {
+                width: 100%;
+                display:flex;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+            @include respondto(sm) {
+                width: 100%;
+                display:flex;
+                justify-content: center;
+                padding-bottom: 35px;
+            }
+            @include respondto(md) {}
+            @include respondto(lg) {}
+            a{
+                img{
+                    // width: 223px;
+                    @include respondto(minxs) {}
+                    @include respondto(maxxs) {
+                        height: 70px;
+                    }
+                    @include respondto(sm) {
+                        height: 75px;
+                    }
+                    @include respondto(md) {
+                        height: 65px;
+                    }
+                    @include respondto(lg) {
+                        height: 73px;
+
+                    }
+                }
+            }
+        }
+        
+        .logo-pdac{
+            // width: 652px;
+            width: 100%;
+            display:flex;
+            @include respondto(minxs) {
+                justify-content: center;
+            }
+            @include respondto(maxxs) {
+                justify-content: center;
+            }
+            @include respondto(sm) {
+                justify-content: center;
+            }
+            @include respondto(md) {
+                justify-content: flex-end;
+            }
+            @include respondto(lg) {
+                justify-content: flex-end;
+            }
+            a{
+                display:flex;
+                justify-content: center;
+                img{
+                    height: 100%;
+                    max-width: 100%;
+                    &:nth-child(1){
+                        @include respondto(minxs) {
+                            display: none;
+                        }
+                        @include respondto(maxxs) {
+                            width: 95%;
+                        }
+                        @include respondto(sm) {
+                            width: 95%;
+                        }
+                        @include respondto(md) {
+                            height: 65px;
+                        }
+                        @include respondto(lg) {
+                            height: 73px;
+                        }
+                    }
+                    &:nth-child(2){
+                        @include respondto(minxs) {
+                            width: 100%;
+                        }
+                        @include respondto(maxxs) {
+                            display: none;
+                        }
+                        @include respondto(sm) {
+                            display: none;
+                        }
+                        @include respondto(md) {
+                            display: none;
+                        }
+                        @include respondto(lg) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

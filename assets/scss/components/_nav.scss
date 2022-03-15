@@ -1,0 +1,1023 @@
+
+
+
+.fondo-menu-footer{
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,.2);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    cursor: pointer;
+    z-index: -20;
+    &.menu-active{
+        z-index: 1100;
+        @include respondto(minxs) {
+            display: block;
+        }
+        @include respondto(maxxs) {
+            display: block;
+        }
+        @include respondto(sm) {
+            display: none;
+        }
+        @include respondto(md) {
+            display: none;
+        }
+        @include respondto(lg) {
+            display: none;
+        }
+    }
+}
+
+$red-nav: $primary-red;
+$red-black-nav: #b91e23;
+$text-nav: #717171;
+
+.container-menu-footer{
+    position: relative;
+    width: 100%;
+    @include respondto(minxs) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        max-width: 96%;
+        transform: translateX(100%);
+        @include ease-default;
+        // transition: all 350ms ease;
+        z-index: 1400;
+        background: #ffffff;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    @include respondto(maxxs) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        max-width: 96%;
+        transform: translateX(100%);
+        @include ease-default;
+        // transition: all 350ms ease;
+        z-index: 1400;
+        background: #ffffff;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    @include respondto(sm) {}
+    @include respondto(md) {}
+    @include respondto(lg) {
+    }
+    &.cat-active{
+        @include respondto(minxs) {
+            overflow-y: hidden;
+        }
+        @include respondto(maxxs) {
+            overflow-y: hidden;
+        }
+        @include respondto(sm) {}
+        @include respondto(md) {}
+        @include respondto(lg) {}
+    }
+    &.menu-active{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        @include respondto(minxs) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            transform: translateX(0%);
+        }
+        @include respondto(maxxs) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            transform: translateX(0%);
+        }
+        @include respondto(sm) {}
+        @include respondto(md) {}
+        @include respondto(lg) {}
+        .close-menu{
+            i{}
+        }
+    }
+    &.scroll-active{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        @include respondto(minxs) {}
+        @include respondto(maxxs) {}
+        @include respondto(sm) {
+            position: fixed;
+            top: 0;
+            z-index: 990;
+        }
+        @include respondto(md) {
+            position: fixed;
+            top: 0;
+            z-index: 990;
+        }
+        @include respondto(lg) {
+            position: fixed;
+            top: 0;
+            z-index: 990;
+        }
+    }
+    .close-menu{
+        padding: 0 15px 0 15px;
+        height: 30px;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #f5f5f5;
+        @include respondto(minxs) {
+            display: flex;
+        }
+        @include respondto(maxxs) {
+            display: flex;
+        }
+        @include respondto(sm) {
+            display: none;
+        }
+        @include respondto(md) {
+            display: none;
+        }
+        @include respondto(lg) {
+            display: none;
+        }
+        i{
+            color: #717171;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+    .container-mf-one{
+        background: $red-nav;
+        @include respondto(minxs) {
+            // background: $primary-green;
+        }
+        @include respondto(maxxs) {
+            // background: $primary-green;
+        }
+        @include respondto(sm) {
+            border-top: 1px solid rgba($primary-grey, .5);
+            // background: #ffffff;
+        }
+        @include respondto(md) {
+            border-top: 1px solid rgba($primary-grey, .5);
+            // background: #ffffff;
+        }
+        @include respondto(lg) {
+            border-top: 1px solid rgba($primary-grey, .5);
+            // background: #ffffff;
+        }
+        .content-mf-one{
+            position: relative;
+            @include respondto(minxs) {
+                padding: 20px 0 20px 0;
+            }
+            @include respondto(maxxs) {
+                padding: 20px 0 20px 0;
+            }
+            @include respondto(sm) {
+                width: 96%;
+                max-width: 1170px;
+                margin: auto;
+                height: 61px;
+            }
+            @include respondto(md) {
+                width: 96%;
+                max-width: 1170px;
+                margin: auto;
+                height: 54px;
+            }
+            @include respondto(lg) {
+                width: 96%;
+                max-width: 1170px;
+                margin: auto;
+                height: 54px;
+            }
+            .lista-mf-one{
+                display: flex;
+                @include respondto(minxs) {
+                    flex-direction: column;
+                }
+                @include respondto(maxxs) {
+                    flex-direction: column;
+                }
+                @include respondto(sm) {
+                    justify-content: space-between;
+                    height: 100%;
+                }
+                @include respondto(md) {
+                    justify-content: space-between;
+                    height: 100%;
+                }
+                @include respondto(lg) {
+                    justify-content: space-between;
+                    height: 100%;
+                }
+                .item-mf-one{
+                    display: flex;
+                    @include respondto(minxs) {
+                        flex-direction: column;
+                    }
+                    @include respondto(maxxs) {
+                        flex-direction: column;
+                    }
+                    @include respondto(sm) {
+                        position: relative;
+                    }
+                    @include respondto(md) {
+                        position: relative;
+                    }
+                    @include respondto(lg) {
+                        position: relative;
+                    }
+                    &:hover{
+                        > a{
+                            @include respondto(minxs) {}
+                            @include respondto(maxxs) {}
+                            @include respondto(sm) {
+                                z-index: 10;
+                                background: $red-black-nav;
+                            }
+                            @include respondto(md) {
+                                z-index: 10;
+                                background: $red-black-nav;
+                            }
+                            @include respondto(lg) {
+                                z-index: 10;
+                                background: $red-black-nav;
+                            }
+                        }
+                        .container-submenu{
+                            @include respondto(minxs) {}
+                            @include respondto(maxxs) {}
+                            @include respondto(sm) {
+                                display: block;
+                                animation: panDown .5s forwards;
+                            }
+                            @include respondto(md) {
+                                display: block;
+                                animation: panDown .5s forwards;
+                            }
+                            @include respondto(lg) {
+                                display: block;
+                                animation: panDown .5s forwards;
+                            }
+                        }
+                    }
+                    > a{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        text-transform: uppercase;
+                        font-family: $font-nunito;
+                        font-weight: 600;
+                        @include respondto(minxs) {
+                            justify-content: flex-end;
+                            text-align: right;
+                            font-size: 13px;
+                            line-height: 1.2;
+                            color: #ffffff;
+                            width: 100%;
+                            min-height: 35px;
+                            padding: 2px 29px 2px 20px;
+                            @include ease-default;
+                        }
+                        @include respondto(maxxs) {
+                            justify-content: flex-end;
+                            text-align: right;
+                            font-size: 13px;
+                            line-height: 1.2;
+                            color: #ffffff;
+                            width: 100%;
+                            min-height: 35px;
+                            padding: 2px 29px 2px 20px;
+                            @include ease-default;
+                        }
+                        @include respondto(sm) {
+                            padding: 0 5px 0 5px;
+                            font-size: 12px;
+                            color: #ffffff;;
+                        }
+                        @include respondto(md) {
+                            padding: 0 5px 0 5px;
+                            font-size: 14px;
+                            color: #ffffff;
+                        }
+                        @include respondto(lg) {
+                            padding: 0 5px 0 5px;
+                            font-size: 15px;
+                            color: #ffffff;
+                        }
+                        &:hover{
+                            z-index: 10;
+                            // background: #fff;
+                            // background: #b91e23;
+                            @include respondto(minxs) {
+                                color: rgba(#ffffff, .8);
+                                background: rgba(0,0,0,.2);
+                                padding: 2px 33px 2px 20px;
+                            }
+                            @include respondto(maxxs) {
+                                color: rgba(#ffffff, .8);
+                                background: rgba(0,0,0,.2);
+                                padding: 2px 33px 2px 20px;
+                            }
+                            @include respondto(sm) {
+                                color: rgba(#ffffff, .9);
+                            }
+                            @include respondto(md) {
+                                color: rgba(#ffffff, .9);
+                            }
+                            @include respondto(lg) {
+                                color: rgba(#ffffff, .9);
+                                // color: #ffffff;
+                            }
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                @include respondto(minxs) {
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 5px;
+                                    background: #ffffff;
+                                    z-index: 1;
+                                }
+                                @include respondto(maxxs) {
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 5px;
+                                    background: #ffffff;
+                                    z-index: 1;
+                                }
+                                @include respondto(sm) {
+                                    top: 0;
+                                    left: 0;
+                                    height: 2px;
+                                    width: 100%;
+                                    background: transparent;
+                                }
+                                @include respondto(md) {
+                                    top: 0;
+                                    left: 0;
+                                    height: 2px;
+                                    width: 100%;
+                                    background: transparent;
+                                }
+                                @include respondto(lg) {
+                                    top: 0;
+                                    left: 0;
+                                    height: 2px;
+                                    width: 100%;
+                                    background: transparent;
+                                }
+                            }
+                        }
+                    }
+                    .title-menu-web{
+                        display: flex;
+                        align-items: center;
+                        @include respondto(minxs) {
+                            display: none;
+                        }
+                        @include respondto(maxxs) {
+                            display: none;
+                        }
+                        @include respondto(sm) {}
+                        @include respondto(md) {}
+                        @include respondto(lg) {}
+                        p{}
+                        i{
+                            @include respondto(minxs) {}
+                            @include respondto(maxxs) {}
+                            @include respondto(sm) {
+                                margin: 0 0 2px 1px;
+                            }
+                            @include respondto(md) {
+                                margin: 0 0 3px 5px;
+                            }
+                            @include respondto(lg) {
+                                margin: 0 0 3px 5px;
+                            }
+                        }
+                    }
+                    .title-menu-mobile{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        text-transform: uppercase;
+                        font-family: $font-nunito;
+                        font-weight: 600;
+                        cursor: pointer;
+                        @include respondto(minxs) {
+                            justify-content: flex-end;
+                            text-align: right;
+                            font-size: 13px;
+                            line-height: 1.2;
+                            color: #ffffff;
+                            width: 100%;
+                            min-height: 35px;
+                            padding: 2px 29px 2px 20px;
+                            @include ease-default;
+                        }
+                        @include respondto(maxxs) {
+                            justify-content: flex-end;
+                            text-align: right;
+                            font-size: 13px;
+                            line-height: 1.2;
+                            color: #ffffff;
+                            width: 100%;
+                            min-height: 35px;
+                            padding: 2px 29px 2px 25px;
+                            @include ease-default;
+                        }
+                        @include respondto(sm) {
+                            display: none;
+                        }
+                        @include respondto(md) {
+                            display: none;
+                        }
+                        @include respondto(lg) {
+                            display: none;
+                        }
+                        &:hover{
+                            z-index: 10;
+                            background: #fff;
+                            @include respondto(minxs) {
+                                color: rgba(#ffffff, .8);
+                                background: rgba(0,0,0,.2);
+                                padding: 2px 33px 2px 20px;
+                            }
+                            @include respondto(maxxs) {
+                                color: rgba(#ffffff, .8);
+                                background: rgba(0,0,0,.2);
+                                padding: 2px 33px 2px 20px;
+                            }
+                            @include respondto(sm) {}
+                            @include respondto(md) {}
+                            @include respondto(lg) {}
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                @include respondto(minxs) {
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 5px;
+                                    background: #ffffff;
+                                    z-index: 1;
+                                }
+                                @include respondto(maxxs) {
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 5px;
+                                    background: #ffffff;
+                                    z-index: 1;
+                                }
+                                @include respondto(sm) {}
+                                @include respondto(md) {}
+                                @include respondto(lg) {}
+                            }
+                            i{
+                                left: 10px;
+                            }
+                        }
+                        i{
+                            position: absolute;
+                            left: 12px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 20px;
+                            transition: all 350ms ease;
+                        }
+                    }
+                    .container-submenu{
+                        @include respondto(minxs) {
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            height: 100vh;
+                            width: 300px;
+                            min-width: 300px;
+                            max-width: 96%;
+                            transform: translateX(100%);
+                            @include ease-default;
+                            // transition: all 350ms ease;
+                            z-index: 1400;
+                            background: $red-nav;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                        }
+                        @include respondto(maxxs) {
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            height: 100vh;
+                            width: 300px;
+                            min-width: 300px;
+                            max-width: 96%;
+                            transform: translateX(100%);
+                            @include ease-default;
+                            // transition: all 350ms ease;
+                            z-index: 1400;
+                            background: $red-nav;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                        }
+                        @include respondto(sm) {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            min-width: 170px;
+                            background: $red-black-nav;
+                            padding: 5px 0 0 0;
+                            z-index: 1;
+                            box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49), 0px -1px 0px rgba(128, 48, 48, 0.49);
+                        }
+                        @include respondto(md) {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            min-width: 210px;
+                            background: $red-black-nav;
+                            padding: 5px 0 0 0;
+                            z-index: 1;
+                            box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49), 0px -1px 0px rgba(128, 48, 48, 0.49);
+                        }
+                        @include respondto(lg) {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            min-width: 210px;
+                            background: $red-black-nav;
+                            padding: 5px 0 0 0;
+                            z-index: 1;
+                            box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49), 0px -1px 0px rgba(128, 48, 48, 0.49);
+                        }
+                        &.cat-active{
+                            @include respondto(minxs) {
+                                position: fixed;
+                                top: 0;
+                                right: 0;
+                                width: 300px;
+                                height: 100vh;
+                                transform: translateX(0%);
+                                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                            }
+                            @include respondto(maxxs) {
+                                position: fixed;
+                                top: 0;
+                                right: 0;
+                                width: 300px;
+                                height: 100vh;
+                                transform: translateX(0%);
+                                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                            }
+                            @include respondto(sm) {}
+                            @include respondto(md) {}
+                            @include respondto(lg) {}
+                        }
+                        .content-submenu{
+                            display: flex;
+                            @include respondto(minxs) {
+                                flex-direction: column;
+                                width: 100%;
+                            }
+                            @include respondto(maxxs) {
+                                flex-direction: column;
+                                width: 100%;
+                            }
+                            @include respondto(sm) {}
+                            @include respondto(md) {}
+                            @include respondto(lg) {}
+                            .atras-submenu{
+                                padding: 0 15px 0 15px;
+                                height: 30px;
+                                justify-content: flex-start;
+                                align-items: center;
+                                background: #f5f5f5;
+                                cursor: pointer;
+                                @include respondto(minxs) {
+                                    display: flex;
+                                }
+                                @include respondto(maxxs) {
+                                    display: flex;
+                                }
+                                @include respondto(sm) {
+                                    display: none;
+                                }
+                                @include respondto(md) {
+                                    display: none;
+                                }
+                                @include respondto(lg) {
+                                    display: none;
+                                }
+                                i{
+                                    color: $text-nav;
+                                    font-size: 20px;
+                                    cursor: pointer;
+                                }
+                                span{
+                                    color: $text-nav;
+                                    font-family: $font-nunito;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    cursor: pointer;
+                                    text-transform: capitalize;
+                                    padding: 0 0 0 10px;
+                                }
+                            }
+                            .sub-title-menu-mobile{
+                                display: flex;
+                                width: 100%;
+                                @include respondto(minxs) {}
+                                @include respondto(maxxs) {}
+                                @include respondto(sm) {
+                                    display: none;
+                                }
+                                @include respondto(md) {
+                                    display: none;
+                                }
+                                @include respondto(lg) {
+                                    display: none;
+                                }
+                                >a{
+                                    text-align: right;
+                                    text-transform: uppercase;
+                                    font-family: $font-nunito;
+                                    font-weight: 600;
+                                    font-size: 15px;
+                                    line-height: 1;
+                                    // background: transparent;
+                                    user-select: none;
+                                    padding: 20px 29px 16px 15px;
+                                    height: 100%;
+                                    width: 100%;
+                                    @include ease-default;
+                                    color: #ffffff;
+                                    background: $red-black-nav;
+                                    &:hover{
+                                        color: #ffffff;
+                                        padding: 20px 33px 16px 15px;
+                                    }
+                                }
+                            }
+                            .container-listas-submenu{
+                                @include respondto(minxs) {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                @include respondto(maxxs) {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                @include respondto(sm) {
+                                    flex: 1;
+                                    display: flex;
+                                    // padding: 0 0 0 20px;
+                                    overflow: hidden;
+                                    // width: calc(100% - 120px);
+                                }
+                                @include respondto(md) {
+                                    flex: 1;
+                                    display: flex;
+                                    // padding: 0 0 0 20px;
+                                    overflow: hidden;
+                                    // width: calc(100% - 120px);
+                                }
+                                @include respondto(lg) {
+                                    flex: 1;
+                                    display: flex;
+                                    // padding: 0 0 0 20px;
+                                    overflow: hidden;
+                                    // width: calc(100% - 120px);
+                                }
+                                .content-lista-submenu{
+                                    @include respondto(minxs) {}
+                                    @include respondto(maxxs) {}
+                                    @include respondto(sm) {
+                                        flex: 1;
+                                        display: flex;
+                                        flex-direction: column;
+                                        // padding: 0 20px 0 0;
+                                    }
+                                    @include respondto(md) {
+                                        flex: 1;
+                                        display: flex;
+                                        flex-direction: column;
+                                        // padding: 0 20px 0 0;
+                                    }
+                                    @include respondto(lg) {
+                                        flex: 1;
+                                        display: flex;
+                                        flex-direction: column;
+                                        // padding: 0 20px 0 0;
+                                    }
+                                    .lista-submenu{
+                                        display: flex;
+                                        flex-direction: column;
+                                        .item-submenu{
+                                            position: relative;
+                                            padding: 0 0 5px 0;
+                                            @include ajustacontrespuntos;
+                                            > a{
+                                                @include respondto(minxs) {
+                                                    position: relative;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    text-transform: uppercase;
+                                                    font-family: $font-nunito;
+                                                    font-weight: 600;
+
+                                                    justify-content: flex-end;
+                                                    text-align: right;
+                                                    font-size: 13px;
+                                                    line-height: 1.2;
+                                                    color: #ffffff;
+                                                    width: 100%;
+                                                    min-height: 35px;
+                                                    padding: 2px 29px 2px 20px;
+                                                    @include ease-default;
+                                                    @include ajustatexto;
+                                                }
+                                                @include respondto(maxxs) {
+                                                    position: relative;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    text-transform: uppercase;
+                                                    font-family: $font-nunito;
+                                                    font-weight: 600;
+
+                                                    justify-content: flex-end;
+                                                    text-align: right;
+                                                    font-size: 13px;
+                                                    line-height: 1.2;
+                                                    color: #ffffff;
+                                                    width: 100%;
+                                                    min-height: 35px;
+                                                    padding: 2px 29px 2px 20px;
+                                                    @include ease-default;
+                                                    @include ajustatexto;
+                                                }
+                                                @include respondto(sm) {
+                                                    text-transform: capitalize;
+                                                    font-family: $font-nunito;
+                                                    font-weight: 600;
+                                                    font-size: 12px;
+                                                    color: #ffffff;
+                                                    padding: 15px 20px 15px 20px;
+                                                    @include ease-default;
+                                                    @include ajustacontrespuntos;
+                                                }
+                                                @include respondto(md) {
+                                                    text-transform: capitalize;
+                                                    font-family: $font-nunito;
+                                                    font-weight: 600;
+                                                    font-size: 12px;
+                                                    color: #ffffff;
+                                                    padding: 15px 20px 15px 20px;
+                                                    @include ease-default;
+                                                    @include ajustacontrespuntos;
+                                                }
+                                                @include respondto(lg) {
+                                                    text-transform: capitalize;
+                                                    font-family: $font-nunito;
+                                                    font-weight: 600;
+                                                    font-size: 13px;
+                                                    color: #ffffff;
+                                                    padding: 15px 20px 15px 20px;
+                                                    @include ease-default;
+                                                    @include ajustacontrespuntos;
+                                                }
+                                                &:hover{
+                                                    z-index: 10;
+                                                    background: #fff;
+                                                    @include respondto(minxs) {
+                                                        color: rgba(#ffffff, .8);
+                                                        background: rgba(0,0,0,.2);
+                                                        padding: 2px 33px 2px 20px;
+                                                    }
+                                                    @include respondto(maxxs) {
+                                                        color: rgba(#ffffff, .8);
+                                                        background: rgba(0,0,0,.2);
+                                                        padding: 2px 33px 2px 20px;
+                                                    }
+                                                    @include respondto(sm) {
+                                                        background: rgba(0,0,0,.2);
+                                                        color: rgba(#ffffff, .8);
+                                                        padding: 15px 20px 15px 23px;
+                                                    }
+                                                    @include respondto(md) {
+                                                        background: rgba(0,0,0,.2);
+                                                        color: rgba(#ffffff, .8);
+                                                        padding: 15px 20px 15px 23px;
+                                                    }
+                                                    @include respondto(lg) {
+                                                        background: rgba(0,0,0,.2);
+                                                        color: rgba(#ffffff, .8);
+                                                        padding: 15px 20px 15px 23px;
+                                                    }
+                                                    &:after{
+                                                        content: '';
+                                                        position: absolute;
+                                                        @include respondto(minxs) {
+                                                            top: 0;
+                                                            right: 0;
+                                                            height: 100%;
+                                                            width: 5px;
+                                                            background: #ffffff;
+                                                            z-index: 1;
+                                                        }
+                                                        @include respondto(maxxs) {
+                                                            top: 0;
+                                                            right: 0;
+                                                            height: 100%;
+                                                            width: 5px;
+                                                            background: #ffffff;
+                                                            z-index: 1;
+                                                        }
+                                                        @include respondto(sm) {}
+                                                        @include respondto(md) {}
+                                                        @include respondto(lg) {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container-mf-two{
+        background: #ffffff;
+        @include respondto(minxs) {
+        }
+        @include respondto(maxxs) {
+        }
+        @include respondto(sm) {
+            display: none;
+        }
+        @include respondto(md) {
+            display: none;
+        }
+        @include respondto(lg) {
+            display: none;
+        }
+        .content-mf-two{
+            @include respondto(minxs) {
+                padding: 20px 0 20px 0;
+            }
+            @include respondto(maxxs) {
+                padding: 20px 0 20px 0;
+            }
+            @include respondto(sm) {
+                width: 96%;
+                max-width: 1170px;
+                margin: auto;
+                height: 34px;
+            }
+            @include respondto(md) {
+                width: 96%;
+                max-width: 1170px;
+                margin: auto;
+                height: 34px;
+            }
+            @include respondto(lg) {
+                width: 96%;
+                max-width: 1170px;
+                margin: auto;
+                height: 34px;
+            }
+            .lista-mf-two{
+                display: flex;
+                @include respondto(minxs) {
+                    flex-direction: column;
+                }
+                @include respondto(maxxs) {
+                    flex-direction: column;
+                }
+                @include respondto(sm) {
+                    justify-content: space-between;
+                    height: 100%;
+                }
+                @include respondto(md) {
+                    justify-content: space-between;
+                    height: 100%;
+                }
+                @include respondto(lg) {
+                    justify-content: space-between;
+                    height: 100%;
+                }
+                .item-mf-two{
+                    display: flex;
+                    > a{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        text-transform: uppercase;
+                        font-family: $font-nunito;
+                        font-weight: 600;
+                        color: $text-nav;
+                        @include respondto(minxs) {
+                            justify-content: flex-end;
+                            text-align: right;
+                            font-size: 13px;
+                            height: 35px;
+                            width: 100%;
+                            padding: 0 29px 0 20px;
+                            @include ease-default;
+                        }
+                        @include respondto(maxxs) {
+                            justify-content: flex-end;
+                            text-align: right;
+                            font-size: 13px;
+                            height: 35px;
+                            width: 100%;
+                            padding: 0 29px 0 20px;
+                            @include ease-default;
+                        }
+                        @include respondto(sm) {
+                            justify-content: center;
+                            text-align: center;
+                            padding: 0 5px 0 5px;
+                            font-size: 12px;
+                        }
+                        @include respondto(md) {
+                            justify-content: center;
+                            text-align: center;
+                            padding: 0 5px 0 5px;
+                            font-size: 14px;
+                        }
+                        @include respondto(lg) {
+                            justify-content: center;
+                            text-align: center;
+                            padding: 0 5px 0 5px;
+                            font-size: 14px;
+                        }
+                        &:hover{
+                            @include respondto(minxs) {
+                                color: rgba($text-nav, .8);
+                                background: rgba(0,0,0,.2);
+                                padding: 0 33px 0 20px;
+                            }
+                            @include respondto(maxxs) {
+                                color: rgba($text-nav, .8);
+                                background: rgba(0,0,0,.2);
+                                padding: 0 33px 0 20px;
+                            }
+                            @include respondto(sm) {
+                                color: $red-nav;
+                            }
+                            @include respondto(md) {
+                                color: $red-nav;
+                            }
+                            @include respondto(lg) {
+                                color: $red-nav;
+                            }
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                @include respondto(minxs) {
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 9px;
+                                    background: $red-nav;
+                                    z-index: 1;
+                                }
+                                @include respondto(maxxs) {
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 9px;
+                                    background: $red-nav;
+                                    z-index: 1;
+                                }
+                                @include respondto(sm) {}
+                                @include respondto(md) {}
+                                @include respondto(lg) {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

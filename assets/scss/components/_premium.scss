@@ -1,0 +1,117 @@
+
+.container-premium{
+    background: #ffffff;
+    width: 100%;
+    .content-premium{
+        padding:50px 0 50px 0;
+        @include respondto(minxs) {
+            padding: 10px 0 40px 0;
+        }
+        @include respondto(maxxs) {}
+        @include respondto(sm) {}
+        @include respondto(md) {}
+        @include respondto(lg) {}
+        .title-premium{
+            width: 100%;
+            height: 76px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-family: $font-nunito;
+                font-weight: 800;
+                color: #262626;
+                font-size: 23px; 
+            }
+
+            .fm-container-arrows{
+                .fm-content-arrows{
+                    display:flex;
+                    flex-direction: row;
+                    // justify-content: space-between;
+                    align-items: center;
+                    .prev-premium{
+                        display: flex !important;
+                        justify-content: center;
+                        align-items: center;
+                        width: 34px;
+                        height: 34px;
+                        background: #f7f7f7;
+                        cursor: pointer;
+                        &:hover{
+                            background: #f0f0f0;
+                        }
+                        i{
+                            font-size: 12px;
+                        }
+                    }
+                    .next-premium{
+                        display: flex !important;
+                        justify-content: center;
+                        align-items: center;
+                        width: 33px;
+                        height: 33px;
+                        background: #f7f7f7;
+                        margin-left: 5px;
+                        cursor: pointer;
+                        &:hover{
+                            background: #f0f0f0;
+                        }
+                        i{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-socios-premium{
+            width: 100%;
+            .slider-socios-premium{
+                .slick-list{
+                    .slick-track{
+                        .content-socios-premium{
+                            padding:0 10px 0 10px;
+                            max-height: 198.5px;
+                            .socios-premium{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border:1px solid #717171;
+                                background: #ccc;
+                                overflow: hidden;
+                                @include respondto(minxs) {
+                                    height: 198.5px;
+                                    min-height: 198.5px;
+                                }
+                                @include respondto(maxxs) {
+                                    height: 172.3px;
+                                    min-height: 172.3px;
+                                }
+                                @include respondto(sm) {
+                                    height: 153px;
+                                    min-height: 153px;
+                                }
+                                @include respondto(md) {
+                                    height: 148.8;
+                                    min-height: 148.8;
+                                }
+                                @include respondto(lg) {
+                                    height: 146px;
+                                    min-height: 146px;
+                                }
+                                a{
+                                    width: 100%;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

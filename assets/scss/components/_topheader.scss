@@ -1,0 +1,446 @@
+
+$red-canada: $primary-red;
+.top-header{
+    background: #f5f5f5;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #dddddd;
+    height: 36px;
+    @include respondto(minxs) {
+        height: 55px;
+    }
+    .container-top-header{
+        display:flex;
+        flex-direction: row;
+        font-family: $font-Roboto;
+        justify-content: space-between;
+        @include respondto(minxs) {
+            margin: 0 0 0 0 !important;
+            width: 100% !important;
+        }
+        @include respondto(maxxs) {}
+        @include respondto(sm) {}
+        @include respondto(md) {}
+        @include respondto(lg) {}
+        .left-top-header{
+            @include respondto(minxs) {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+            }
+            .logo-top{
+                display: none;
+                @include respondto(minxs) {
+                    max-width: 105px;
+                    width: 85%;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+
+                }
+                a{
+                    @include respondto(minxs) {
+                        // justify-content: center;
+                        display: flex;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }  
+            .content-redes{
+                @include respondto(minxs) {
+                    display: none;
+                }
+                .redes-top{
+                    display:flex;
+                    flex-direction: row;
+                    .link-redes{
+                        display: flex;
+                        height: 36px;
+                        width: 40px;
+                        border-left: 1px solid #dddddd;
+                        border-bottom: 1px solid #dddddd;
+                        transition: all 350ms ease;
+                        &:nth-child(4){
+                            border-right: 1px solid #dddddd;
+                        }
+                        &:hover{
+                            background: #fafafa;
+                            &.twitter{
+                                a{
+                                    i{
+                                        color:#55acee; 
+                                    }
+                                }
+                            }
+                            &.linkedin{
+                                a{
+                                    i{
+                                        color:#0976b4; 
+                                    }
+                                }
+                            }
+                            &.youtube{
+                                a{
+                                    i{
+                                        color:#b31217; 
+                                    }
+                                }
+                            }
+                            &.facebook{
+                                a{
+                                    i{
+                                        color:#3b5998; 
+                                    }
+                                }
+                            }
+                        }
+                        a{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+                            width: 100%;
+                            font-family: $font-nunito;
+                            font-weight: 400;
+                            i{
+                                color:#717171;
+                                font-size: 14px;
+                                transition: all 350ms ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .rigth-top-header{
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            // height: 100%;
+            @include respondto(minxs) {
+                background: $red-canada;
+                width: 60%;
+            }
+            .content-options{
+                @include respondto(minxs) {
+                    width: 100%;                    
+                }
+                .botones-top{ 
+                    display:flex;
+                    height: 36px;
+                    @include respondto(minxs) {
+                        justify-content: space-between;
+                        height: 100%;
+                    }
+                    .btn-top{
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: $font-nunito;
+                        font-weight: 400;
+                        padding: 0 10px 0 10px;
+                        height: 100%;
+                        &.ingresa{
+                            @include respondto(minxs) {
+                                // width: 40%;
+                            }
+                            @include respondto(maxxs) {}
+                            @include respondto(sm) {}
+                            @include respondto(md) {}
+                            @include respondto(lg) {}
+                            &:hover{
+                                a{
+                                    span{
+                                        @include respondto(minxs) {}
+                                        @include respondto(maxxs) {
+                                            color: $red-canada;
+                                        }
+                                        @include respondto(sm) {
+                                            color: $red-canada;
+                                        }
+                                        @include respondto(md) {
+                                            color: $red-canada;
+                                        }
+                                        @include respondto(lg) {
+                                            color: $red-canada;
+                                        }
+                                    }
+                                }
+                            }
+                            a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100%;
+                                span{
+                                    transition: all 0.2s ease-in-out;
+                                    font-family: $font-nunito;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: #717171;
+                                    @include respondto(minxs) {
+                                        color: #fff;
+                                    }
+                                    @include respondto(maxxs) {}
+                                    @include respondto(sm) {}
+                                    @include respondto(md) {}
+                                    @include respondto(lg) {}
+                                }
+                            }
+                        }
+                        &.carrito{
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            @include respondto(minxs) {
+                                display: none !important;
+                            }
+                            @include respondto(maxxs) {}
+                            @include respondto(sm) {}
+                            @include respondto(md) {}
+                            @include respondto(lg) {}
+                            &:hover{
+                                .icono-carrito{
+                                    i{}
+                                    .carrito-cantidad{
+                                        p{}
+                                    }
+                                }
+                                >span{
+                                    color: $red-canada;
+                                }
+                            }
+                            .icono-carrito{
+                                position: relative;
+                                margin: 0 15px 0 0;
+                                i{
+                                    color: #717171;
+                                    font-size: 18px;
+                                }
+                                .carrito-cantidad{
+                                    position: absolute;
+                                    display: flex;
+                                    justify-content: center;
+                                    text-align: center;
+                                    align-items: center;
+                                    background: $white;
+                                    border-radius: 100%;
+                                    background-color: $red-canada;
+                                    top: -5px;
+                                    right: -14px;
+                                    min-height: 17px;
+                                    min-width: 17px;
+                                    p{
+                                        font-family: $font-nunito;
+                                        font-weight: 400;
+                                        font-size: 6px;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            >span{
+                                font-family: $font-nunito;
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #717171;
+                            }
+                        }
+                        &.miembros{
+                            @include respondto(minxs) {
+                                display: none !important;
+                            }
+                            @include respondto(maxxs) {}
+                            @include respondto(sm) {}
+                            @include respondto(md) {}
+                            @include respondto(lg) {}
+                            &:hover{
+                                a{
+                                    span{
+                                        @include respondto(minxs) {}
+                                        @include respondto(maxxs) {
+                                            color: $red-canada;
+                                        }
+                                        @include respondto(sm) {
+                                            color: $red-canada;
+                                        }
+                                        @include respondto(md) {
+                                            color: $red-canada;
+                                        }
+                                        @include respondto(lg) {
+                                            color: $red-canada;
+                                        }
+                                    }
+                                }
+                            }
+                            a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100%;
+                                span{
+                                    font-family: $font-nunito;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: #717171;
+                                }
+                            }
+                        }
+                        &.idioma{
+                            position: relative;
+                            .select-idioma{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100%;
+                                cursor: pointer;
+                                &:hover{
+                                    span{
+                                        color: $red-canada;
+                                        @include respondto(minxs) {
+                                            color: #fff;
+                                        }
+                                        @include respondto(maxxs) {}
+                                        @include respondto(sm) {}
+                                        @include respondto(md) {}
+                                        @include respondto(lg) {}
+                                    }
+                                    img{}
+                                    i{
+                                        color: $red-canada;
+                                        @include respondto(minxs) {
+                                            color: #fff;
+                                        }
+                                        @include respondto(maxxs) {}
+                                        @include respondto(sm) {}
+                                        @include respondto(md) {}
+                                        @include respondto(lg) {}
+                                    }
+                                }
+                                span{
+                                    font-family: $font-nunito;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: #717171;
+                                    padding: 0 5px 0 0;
+                                    @include respondto(minxs) {
+                                        color: #fff;
+                                    }
+                                    @include respondto(maxxs) {}
+                                    @include respondto(sm) {}
+                                    @include respondto(md) {}
+                                    @include respondto(lg) {}
+                                }
+                                img{
+                                    width: 14px;
+                                    border: 1px solid rgba(#fff, 0.2);
+                                }
+                                i{
+                                    font-size: 16px;
+                                    padding: 0 0 0 5px;
+                                    color: #717171;
+                                    @include respondto(minxs) {
+                                        color: #fff;
+                                    }
+                                    @include respondto(maxxs) {}
+                                    @include respondto(sm) {}
+                                    @include respondto(md) {}
+                                    @include respondto(lg) {}
+                                }
+                            }
+                            .content-idioma{
+                                position: absolute;
+                                top: 100%;
+                                right: 0;
+                                display: none;
+                                flex-direction: column;
+                                background-color: #fff;
+                                border: 1px solid #dddddd;
+                                &.active{
+                                    display: flex;
+                                }
+                                .item-idioma{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 36px;
+                                    padding: 0 15px 0 15px;
+                                    @include respondto(minxs) {
+                                        height: 45px;
+                                    }
+                                    @include respondto(maxxs) {}
+                                    @include respondto(sm) {}
+                                    @include respondto(md) {}
+                                    @include respondto(lg) {}
+                                    cursor: pointer;
+                                    &:hover{
+                                        background-color: rgb(245, 245, 245);
+                                    }
+                                    span{
+                                        font-family: $font-nunito;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        color: #717171;
+                                        padding: 0 5px 0 0;
+                                    }
+                                    img{
+                                        width: 14px;
+                                    }
+                                }
+                            }
+                        }
+                        &.boton-menu{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            padding: 0 10px 0 10px;
+                            @include respondto(minxs) {
+                            }
+                            @include respondto(maxxs) {
+                            }
+                            @include respondto(sm) {
+                                display: none !important;
+                            }
+                            @include respondto(md) {
+                                display: none !important;
+                            }
+                            @include respondto(lg) {
+                                display: none !important;
+                            }
+                            i{
+                                font-size: 18px;
+                                color:#ffffff;
+                                @include respondto(minxs) {
+                                }
+                                @include respondto(maxxs) {
+                                    color:#717171;
+                                }
+                            }
+                        }
+                        i{
+                            color: #717171;
+                            // padding: 5px;
+                            @include respondto(minxs) {
+                                color:#ffffff;
+                                font-size: 13px;
+                            }
+
+                        }
+                        p{
+                            font-size: 13px;
+                            color: #717171; 
+                            @include respondto(minxs) {
+                                color: #ffffff;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

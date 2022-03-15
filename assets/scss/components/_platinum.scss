@@ -1,0 +1,150 @@
+
+.container-platinum{
+    width: 100%;
+    // background: yellowgreen;
+    .content-platinum{
+        padding:10px 0;
+        @include respondto(minxs) {
+            padding: 0;
+        }
+        @include respondto(maxxs) {}
+        .title-platinum{
+            width: 100%;
+            height: 66px;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            @include respondto(minxs) {
+                height: 58px;
+            }
+            @include respondto(maxxs) {}
+            h3{
+                font-family: $font-nunito;
+                font-weight: 800;
+                font-size: 23px;
+            }
+        }
+
+        .bloques-platinum{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            @include respondto(minxs) {
+                display:flex;
+                flex-direction:column;
+            }
+            @include respondto(maxxs) {
+                display:flex;
+                flex-direction:column;
+                // justify-content: center;
+                // align-items: center;
+
+            }
+            .imagen-platinum{
+                width: 53%;
+                @include respondto(minxs) {
+                    width: 100%;
+                    padding-bottom: 30px;
+                }
+                @include respondto(maxxs) {
+                    width: 100%;
+                    padding-bottom: 30px;
+                }
+                @include respondto(sm) {}
+                @include respondto(md) {}
+                @include respondto(lg) {}
+                a {
+                    img{
+                        width: 95%;
+                        @include respondto(minxs) {
+                            width: 100%;
+                            // overflow: hidden;
+                        }
+                        @include respondto(maxxs) {
+                            width: 100%;
+                        }
+                        @include respondto(sm) {}
+                        @include respondto(md) {}
+                        @include respondto(lg) {}
+                    }
+                }
+            }
+            
+            .info-platinum{
+                width: 47%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-left: 15px;
+                @include respondto(minxs) {
+                    width: 100%;
+                    padding: 0;
+                }
+                @include respondto(maxxs) {
+                    width: 100%;
+                    padding:0 ;
+                }
+                @include respondto(sm) {}
+                @include respondto(md) {}
+                @include respondto(lg) {}
+                a{ 
+                    img{
+                        width: 40%;
+                        @include respondto(minxs) {
+                            width: 60%;
+                            padding-bottom: 20px;
+                        }
+                         @include respondto(maxxs) {
+                            width: 30%;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+                .description-socio{
+                    width: 100%;
+                    padding: 0 4px;
+                    @include respondto(minxs) {
+                        padding: 0 3px;
+                    } 
+                    p{
+                        font-family: $font-nunito;
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: #262626;
+                    }
+                }
+                .mas-socio{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    p{
+                        padding-top: 40px;
+                        @include respondto(minxs) {
+                            padding-top: 30px;
+                        }
+                        @include respondto(maxxs) {
+                            padding-top: 30px;
+                        }
+                        a{
+                            font-family: $font-nunito;
+                            font-weight: 800;
+                            font-size: 19px;
+                            color: #262626;
+                            i{
+                                padding-top: 30px;
+                                padding-left: 15px;
+                                @include respondto(minxs) {
+                                    padding-top: 30px;
+                                }
+                                @include respondto(maxxs) {
+                                    padding-top: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

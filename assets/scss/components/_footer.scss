@@ -1,0 +1,248 @@
+
+.container-footer {
+    background: $dark-app-bar;
+    width: 100%;
+    .content-footer {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        padding: 25px 0 50px 0;
+        .grupo-footer {
+            @include respondto(minxs) {
+                width: 100%;
+                text-align: center;
+            }
+            @include respondto(maxxs) {
+                width: 100%;
+                text-align: center;
+            }
+            @include respondto(sm) {
+                width: 100%;
+                text-align: center;
+            }
+            @include respondto(md) {
+                width: 33.3%;
+                padding:35px 0 ;
+            }
+            @include respondto(lg) {
+                width: 33.3%;
+                padding:35px 0 ;
+            }
+            &:nth-child(1){
+                @include respondto(minxs) {}
+                @include respondto(maxxs) {}
+                @include respondto(sm) {
+                }
+                @include respondto(md) {
+                }
+                @include respondto(lg) {
+                }
+            }
+            &:nth-child(2){
+                @include respondto(minxs) {
+                    padding: 0 20px 0 20px;
+                }
+                @include respondto(maxxs) {
+                    padding:0 45px 0 45px;
+                }
+                @include respondto(sm) {
+                    padding:0 65px 0 65px;
+                }
+                @include respondto(md) {
+                    padding-right: 15px;
+                }
+                @include respondto(lg) {
+                    padding-right: 15px;
+                }
+
+            }
+            &:nth-child(3){
+                @include respondto(minxs) {}
+                @include respondto(maxxs) {}
+                @include respondto(sm) {}
+                @include respondto(md) {
+                    padding-left: 18px;
+                }
+                @include respondto(lg) {
+                    padding-left: 30px;
+                }
+            }
+            .logo-title-footer {
+                @include respondto(minxs) {
+                    margin-top: -10px;
+                    padding-bottom: 10px; 
+                }
+                @include respondto(maxxs) {}
+                @include respondto(sm) {}
+                @include respondto(md) {
+                    margin: -55px 0 -10px -25px;
+                }
+                @include respondto(lg) {
+                    margin: -55px 0 -10px -25px;   
+                }
+                img {
+                    width: 243px;
+                }
+            }
+            .parrafo-logo{
+                @include respondto(minxs) {}
+                @include respondto(maxxs) {
+                    display: flex;
+                    justify-content: center;
+                }
+                @include respondto(sm) {
+                    display: flex;
+                    justify-content: center;
+                    // flex-wrap: nowrap;
+                }
+                @include respondto(md) {
+                }
+                @include respondto(lg) {   
+                }
+                p{  
+                    color: #9b9b9b;
+                    font-size: 14px;
+                    line-height : 1.6;
+                    font-family: $font-nunito;
+                }
+            }
+            .presentacion-footer{
+                @include respondto(minxs) {
+                    padding-top:25px;
+                }
+                @include respondto(maxxs) {
+                    padding-top:15px;
+                }
+                @include respondto(sm) {
+                    padding-top:15px;
+                }
+                @include respondto(md) {
+                    padding-top:7px;
+                }
+                @include respondto(lg) {
+                    padding-top:7px;       
+                }
+                p{
+                    color: #9b9b9b;
+                    font-size: 14px;
+                    line-height : 1.6;
+                    font-family: $font-nunito;
+                }
+            }
+            .lista-footer{
+                @include respondto(minxs) {
+                    padding: 37px 25px 0 25px;
+                }
+                @include respondto(maxxs) {
+                    padding-top: 25px;
+                }
+                @include respondto(sm) {
+                    padding-top:25px;
+                }
+                @include respondto(md) {
+                    padding-top:7px;
+                }
+                @include respondto(lg) {
+                    padding-top:7px;       
+                }
+                
+                .direccion-contacto{
+                    color: #9b9b9b;
+                    font-size: 14px;
+                    line-height : 1.6;
+                    font-family: $font-nunito;
+                }
+                .num-contacto{
+                    color:#9b9b9b;
+                    font-size: 14px;
+                    line-height : 1.6;
+                    font-family: $font-nunito;
+                    transition: all 0.15s linear 0s;
+                    &:hover{
+                        color: rgba(204,204,204,1);
+                    }
+                }
+                .contacto{
+                    
+                    display: flex;
+                    
+                    @include respondto(minxs) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    @include respondto(maxxs) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    @include respondto(sm) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    @include respondto(md) {
+                        padding-top:7px;
+                        justify-content: space-between;
+                    }
+                    @include respondto(lg) {
+                        padding-top:7px; 
+                        justify-content: space-between;      
+                    }
+                    .mail-contacto{
+                        color:#9b9b9b;
+                        padding-top:11px;
+                        transition: all 0.15s linear 0s;
+                        font-size: 14px;
+                        line-height : 1.6;
+                        font-family: $font-nunito;
+                        &:hover{
+                            color: rgba(204,204,204,1);
+                        }
+                        @include respondto(minxs) {
+                            padding:0;
+                        }
+                    }
+                    .redes-contacto{
+                        display: flex;
+                        flex-direction: row;
+                        @include respondto(minxs) {
+                            padding-top: 15px;
+                        }
+                        @include respondto(maxxs) {
+                            padding-top: 15px;
+                        }
+                        @include respondto(sm) {
+                            padding-top:15px;
+                        }
+                        @include respondto(md) {
+                            padding-top:5px;
+                        }
+                        @include respondto(lg) {
+                            padding-top:5px;
+                        }
+                        
+                        li{
+                            a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                background-color: #9B9B9B;
+                                width: 23px;
+                                height: 23px;
+                                margin:0 4px 0 4px;
+                                transition: all 0.15s linear 0s;
+                                &:hover{
+                                    background-color: rgba(204,204,204,1);
+                                }
+                    
+                                i{
+                                    color: #262626;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

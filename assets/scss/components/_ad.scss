@@ -1,0 +1,57 @@
+
+.container-anuncio{
+    width: 100%;
+    // background: blue;
+    .content-anuncio{
+        padding:20px 0;   
+        .imagen-anuncio{
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            width: 100%;
+            a{
+                width: 70%;
+                @include respondto(minxs) {
+                    display: none;
+                }
+                @include respondto(maxxs) {
+                    display: none;
+                }
+                @include respondto(sm) {
+                    width: 85%;
+                }
+                img{
+                    width: 100%;
+                    border-radius: 3px;
+                }
+            }
+        }
+        .imagen-anuncio-mobile{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            a{
+                width: 70%;
+                @include respondto(minxs) {
+                    width: 100%;
+                }
+                @include respondto(maxxs) {
+                    width: 95%;
+                }
+                @include respondto(sm) {
+                    display: none;
+                }
+                @include respondto(md) {
+                    display: none;
+                }
+                @include respondto(lg) {
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
